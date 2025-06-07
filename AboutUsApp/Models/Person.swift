@@ -12,10 +12,9 @@ struct Person {
     let name: String
     let surname: String
     let age: String
-    let pet: String
     let photo: String
     
-    var fullNam: String {
+    var fullName: String {
         "(\(name) \(surname))"
     }
     
@@ -23,7 +22,6 @@ struct Person {
         self.name = name
         self.surname = surname
         self.age = age
-        self.pet = pet
         self.photo = photo
     }
 }
@@ -34,7 +32,7 @@ struct User {
     static func getUser() -> User {
         User(
             username: "User",
-            password: "Password",
+            password: "Password"
         )
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OlegViewController: UIViewController {
+class CreatorViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

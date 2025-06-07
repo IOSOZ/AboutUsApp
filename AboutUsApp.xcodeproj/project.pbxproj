@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		6CB0C14F2DF20C0100D3ED66 /* AboutUsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AboutUsApp.app; path = "/Users/olegzuev/Documents/Swift/Module 2/AboutUsApp/build/Debug-iphoneos/AboutUsApp.app"; sourceTree = "<absolute>"; };
+		6CB0C1A72DF47C0900D3ED66 /* AboutUsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutUsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		6CB0C1382DF208B600D3ED66 /* Exceptions for "AboutUsApp" folder in "AboutUsApp" target */ = {
+		6CB0C20B2DF48C6A00D3ED66 /* Exceptions for "AboutUsApp" folder in "AboutUsApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/Info.plist,
@@ -24,7 +24,7 @@
 		6CB0C1282DF208B300D3ED66 /* AboutUsApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				6CB0C1382DF208B600D3ED66 /* Exceptions for "AboutUsApp" folder in "AboutUsApp" target */,
+				6CB0C20B2DF48C6A00D3ED66 /* Exceptions for "AboutUsApp" folder in "AboutUsApp" target */,
 			);
 			path = AboutUsApp;
 			sourceTree = "<group>";
@@ -46,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				6CB0C1282DF208B300D3ED66 /* AboutUsApp */,
+				6CB0C1A72DF47C0900D3ED66 /* AboutUsApp.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +72,7 @@
 			packageProductDependencies = (
 			);
 			productName = AboutUsApp;
-			productReference = 6CB0C14F2DF20C0100D3ED66 /* AboutUsApp.app */;
+			productReference = 6CB0C1A72DF47C0900D3ED66 /* AboutUsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

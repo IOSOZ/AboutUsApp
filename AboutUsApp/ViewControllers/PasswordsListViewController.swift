@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SergViewController: UIViewController {
+class PasswordsListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
