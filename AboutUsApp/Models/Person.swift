@@ -27,3 +27,14 @@ struct Person {
         self.photo = photo
     }
 }
+
+struct User {
+    let username: String
+    let password: String
+    static func getUser() -> User {
+        User(
+            username: "User",
+            password: "Password",
+        )
+    }
+}
