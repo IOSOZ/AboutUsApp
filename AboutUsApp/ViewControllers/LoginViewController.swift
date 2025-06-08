@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
     
     private let user = User.getUser()
     
@@ -19,6 +20,7 @@ class LoginViewController: UIViewController {
         loginTextField.text = user.username
         passwordTextField.text = user.password
         loginTextField.layer.cornerRadius = 10
+        logInButton.layer.cornerRadius = 10
     }
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -29,11 +31,10 @@ class LoginViewController: UIViewController {
         return true
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let tabBarController = segue.destination as? OlegViewController
-//        tabBarController?.user = user
-//    }
-    
+    @IBAction func tintPasswordButtonPressed() {
+        showAlert(withTitle: "Логин и пароль", andMessage: "Логин: \(user.username) Пароль: \(user.password)")
+    }
+
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         loginTextField.text = ""
         passwordTextField.text = ""
@@ -45,5 +46,6 @@ class LoginViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+   
 }
 

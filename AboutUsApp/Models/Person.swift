@@ -1,12 +1,4 @@
-//
-//  Person.swift
-//  AboutUsApp
-//
-//  Created by Олег Зуев on 05.06.2025.
-//
-
 import Foundation
-
 
 struct Person {
     let name: String
@@ -15,16 +7,22 @@ struct Person {
     let photo: String
     
     var fullName: String {
-        "(\(name) \(surname))"
+        "\(name) \(surname)"
     }
     
-    init(name: String, surname: String, age: String, pet: String, photo: String) {
+    init(name: String, surname: String, age: String, photo: String) {
         self.name = name
         self.surname = surname
         self.age = age
         self.photo = photo
     }
 }
+
+let personOleg = Person(name: "Олег", surname: "Зуев", age: "25", photo: "photo_Oleg")
+let personSergey = Person(name: "Сергей", surname: "Макаров", age: "28", photo: "photo_Sergey")
+
+
+let creators: [Person] = [personOleg, personSergey]
 
 struct User {
     let username: String
