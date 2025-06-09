@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PasswordsListViewController: UITableViewController {
+final class PasswordsListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

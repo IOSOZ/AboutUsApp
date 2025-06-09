@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailsTableViewController: UITableViewController {
+final class DetailsTableViewController: UITableViewController {
     
     var indexOfSite: Int!
     
@@ -41,6 +41,7 @@ class DetailsTableViewController: UITableViewController {
             DataManager.shared.getAllSites()[self.indexOfSite].userName = username
             DataManager.shared.getAllSites()[self.indexOfSite].password = password
             
+            self.title = DataManager.shared.getAllSites()[self.indexOfSite].siteName
             self.tableView.reloadData()
         })
         
@@ -55,7 +56,6 @@ extension DetailsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "siteDetails", for: indexPath)
         
         let sites = DataManager.shared.getAllSites()
@@ -71,7 +71,7 @@ extension DetailsTableViewController {
             content.secondaryText = site.userName
         default :
             content.text = "Пароль:"
-            content.secondaryText = site.password
+            content.secondaryText = "••••••••"
         }
         cell.contentConfiguration = content
         
@@ -83,7 +83,17 @@ extension DetailsTableViewController {
 
 extension DetailsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard indexPath.row == 2 else {return}
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        let site = DataManager.shared.getAllSites()[indexOfSite]
+        
+        var content = cell?.defaultContentConfiguration()
+        content?.text = "Пароль:"
+        content?.secondaryText = site.password
+        
+        cell?.contentConfiguration = content
     }
 }
