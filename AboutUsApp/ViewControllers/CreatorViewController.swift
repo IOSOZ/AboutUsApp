@@ -1,29 +1,40 @@
-//
-//  OlegViewController.swift
-//  AboutUsApp
-//
-//  Created by Олег Зуев on 05.06.2025.
-//
-
 import UIKit
 
 class CreatorViewController: UITableViewController {
 
+    let creators: [Person] = [
+        Person(name: "Олег", surname: "Зуев", age: "25", photo: "photo_Oleg"),
+        Person(name: "Сергей", surname: "Макаров", age: "28", photo: "photo_Sergey")
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.rowHeight = UITableView.automaticDimension
+           tableView.estimatedRowHeight = 400
     }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        creators.count
+    }
+   
     
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+            let footerView = UIView()
+            footerView.backgroundColor = .clear
+            return footerView
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "creatorCell", for: indexPath) as? CreatorTableViewCell else {
+            fatalError("Cell is not of type CreatorTableViewCell")
+        }
+        
+        
+        let person = creators[indexPath.row]
+        cell.configure(with: person)
+        
+        return cell
     }
-    */
-
 }
+
