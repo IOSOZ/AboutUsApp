@@ -12,8 +12,8 @@ final class DataManager {
     
     private var sites: [SiteInfo] = [
         SiteInfo(siteAdress: "www.swiftbook.org", userName: "IOSZver", password: "123qwe"),
-        SiteInfo(siteAdress: "www.google.com", userName: "User2", password: "pass456"),
-        SiteInfo(siteAdress: "www.apple.com", userName: "User3", password: "hello789")
+        SiteInfo(siteAdress: "www.openai.com", userName: "UwillSmithRobot", password: "185252"),
+        SiteInfo(siteAdress: "www.onlyfans.com", userName: "NakedInfluenser", password: "HardWorkPaysOf")
     ]
     
     func getAllSites() -> [SiteInfo] {
