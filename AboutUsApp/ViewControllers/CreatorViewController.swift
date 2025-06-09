@@ -11,7 +11,7 @@ class CreatorViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.rowHeight = UITableView.automaticDimension
-           tableView.estimatedRowHeight = 80
+           tableView.estimatedRowHeight = 400
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +33,7 @@ class CreatorViewController: UITableViewController {
         
         let person = creators[indexPath.row]
         cell.configure(with: person)
+        
         return cell
     }
 }
