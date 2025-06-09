@@ -9,18 +9,21 @@ import UIKit
 
 final class PasswordsListViewController: UITableViewController {
 
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Менджер паролей"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewSite))
     }
     
+    // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         let detailsVC = segue.destination as? DetailsTableViewController
         detailsVC?.indexOfSite = indexPath.row
     }
     
+    // MARK: - Private methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()

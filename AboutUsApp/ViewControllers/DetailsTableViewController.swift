@@ -11,12 +11,14 @@ final class DetailsTableViewController: UITableViewController {
     
     var indexOfSite: Int!
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = DataManager.shared.getAllSites()[indexOfSite].siteName
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editSite))
     }
     
+    // MARK: - Private methods
     @objc private func editSite() {
         let alert = UIAlertController(
             title: "Редактирование данных",

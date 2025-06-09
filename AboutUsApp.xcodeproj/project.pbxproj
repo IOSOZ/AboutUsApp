@@ -45,8 +45,8 @@
 		6CB0C11D2DF208B300D3ED66 = {
 			isa = PBXGroup;
 			children = (
-				6CB0C1282DF208B300D3ED66 /* AboutUsApp */,
 				6CB0C1A72DF47C0900D3ED66 /* AboutUsApp.app */,
+				6CB0C1282DF208B300D3ED66 /* AboutUsApp */,
 			);
 			sourceTree = "<group>";
 		};
